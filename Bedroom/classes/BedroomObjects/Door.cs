@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace Bedroom.classes.BedroomObjects
 {
-    public class Bed : GraphicElement
+    public class Door : GraphicElement
     {
-        public Bed(Point start, Point end) : base(start, end){}
-        public Bed() {}
+        public Door() { }
+        public Door(Point start, Point end) : base(start, end) { }
 
     }
 }

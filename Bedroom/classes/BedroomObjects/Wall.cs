@@ -7,12 +7,11 @@ using System.Threading.Tasks;
 
 namespace Bedroom.classes.BedroomObjects
 {
-    internal class Wall : GraphicElement
+    public class Wall : GraphicElement
     {
         Pen pen = new Pen(Color.Black, 5);
-        public Wall(Point start, Point end) : base(start, end)
-        {
-        }
+        public Wall(Point start, Point end) : base(start, end) {}
+        public Wall() {}
 
         public override void draw(Graphics g)
         {

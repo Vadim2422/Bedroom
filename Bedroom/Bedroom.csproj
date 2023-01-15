@@ -46,8 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="classes\BedroomObjects\Armchair.cs" />
     <Compile Include="classes\BedroomObjects\Bed.cs" />
+    <Compile Include="classes\BedroomObjects\BedsideTable.cs" />
+    <Compile Include="classes\BedroomObjects\Computer.cs" />
+    <Compile Include="classes\BedroomObjects\Door.cs" />
+    <Compile Include="classes\BedroomObjects\Lamp.cs" />
+    <Compile Include="classes\BedroomObjects\Size.cs" />
+    <Compile Include="classes\BedroomObjects\Table.cs" />
+    <Compile Include="classes\BedroomObjects\Text.cs" />
     <Compile Include="classes\BedroomObjects\Wall.cs" />
+    <Compile Include="classes\BedroomObjects\Wardrobe.cs" />
+    <Compile Include="classes\BedroomObjects\Window.cs" />
+    <Compile Include="classes\DataObjects.cs" />
     <Compile Include="classes\DrawingField.cs" />
     <Compile Include="classes\GraphicElement.cs" />
     <Compile Include="Form1.cs">
@@ -56,10 +67,19 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -86,7 +106,15 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="src\Bed.png" />
-    <Content Include="src\photo.jpg" />
+    <Content Include="src\BedsideTable.png" />
+    <Content Include="src\Computer.png" />
+    <Content Include="src\Door.png" />
+    <Content Include="src\Armchair.png" />
+    <Content Include="src\Lamp.png" />
+    <Content Include="src\Size.png" />
+    <Content Include="src\Window.png" />
+    <Content Include="src\Wardrobe.png" />
+    <Content Include="src\Table.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
