@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+
 
 namespace Bedroom.classes
 {
@@ -13,12 +9,12 @@ namespace Bedroom.classes
         public Point start;
         public Point end;
         public int angle = 0;
-        public string path = null;
-
-        public GraphicElement(Point start, Point end) 
+        public string path = "D:\\src\\";
+        public GraphicElement(Point start, Point end, string path) 
         {
             this.start = start;
-            this.end = end; 
+            this.end = end;
+            this.path += path;
         }
 
         public GraphicElement() {}

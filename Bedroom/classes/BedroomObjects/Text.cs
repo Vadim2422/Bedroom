@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Bedroom.classes.BedroomObjects
 {
@@ -11,9 +8,10 @@ namespace Bedroom.classes.BedroomObjects
     {
             public string text;
             public Text() { }
-            public Text(string text, Point start, Point end) : base(start, end) 
+            public Text(string text, Point start, Point end) : base(start, end, "") 
             {
-            this.text = text;
+                this.text = text;
+                path = null;
             }
             
             public override void draw(Graphics g)

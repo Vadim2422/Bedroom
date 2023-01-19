@@ -3,9 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 namespace Bedroom.classes
@@ -17,7 +14,7 @@ namespace Bedroom.classes
     [XmlInclude(typeof(BedsideTable))]
     [XmlInclude(typeof(Computer))]
     [XmlInclude(typeof(Door))]
-    [XmlInclude(typeof(BedroomObjects.Size))]
+    [XmlInclude(typeof(Arrow))]
     [XmlInclude(typeof(Table))]
     [XmlInclude(typeof(Text))]
     [XmlInclude(typeof(Wardrobe))]

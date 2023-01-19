@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Bedroom.classes.BedroomObjects
 {
     public class Armchair : GraphicElement
     {
         public Armchair() { }
-        public Armchair(Point start, Point end) : base(start, end) { }
-
+        public Armchair(Point start, Point end) : base(start, end, "Armchair.png") {}
     }
 }

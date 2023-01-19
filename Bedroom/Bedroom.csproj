@@ -52,7 +52,7 @@
     <Compile Include="classes\BedroomObjects\Computer.cs" />
     <Compile Include="classes\BedroomObjects\Door.cs" />
     <Compile Include="classes\BedroomObjects\Lamp.cs" />
-    <Compile Include="classes\BedroomObjects\Size.cs" />
+    <Compile Include="classes\BedroomObjects\Arrow.cs" />
     <Compile Include="classes\BedroomObjects\Table.cs" />
     <Compile Include="classes\BedroomObjects\Text.cs" />
     <Compile Include="classes\BedroomObjects\Wall.cs" />
@@ -111,7 +111,7 @@
     <Content Include="src\Door.png" />
     <Content Include="src\Armchair.png" />
     <Content Include="src\Lamp.png" />
-    <Content Include="src\Size.png" />
+    <Content Include="src\Arrow.png" />
     <Content Include="src\Window.png" />
     <Content Include="src\Wardrobe.png" />
     <Content Include="src\Table.png" />

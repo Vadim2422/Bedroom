@@ -1,4 +1,5 @@
 ﻿using Bedroom.classes;
+using Bedroom.classes.BedroomObjects;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Bedroom
 {
@@ -19,7 +19,7 @@ namespace Bedroom
         GraphicElement last_object = null;
         public string mode = "Wall";
         public Point click;
-        String size = null;
+        string size = null;
         public Form1()
         {
             this.WindowState = FormWindowState.Maximized;
@@ -93,31 +93,40 @@ namespace Bedroom
                         last_object = draw.DrawWall(click, new Point(e.X, e.Y));
                         break;
                     case "Bed":
-                        last_object = draw.DrawBed(click, new Point(e.X, e.Y));
-                       break;
+                        Bed bed = new Bed(click, new Point(e.X, e.Y));
+                        last_object = draw.DrawPicture(bed);
+                        break;
                     case "BedsideTable":
-                        last_object = draw.DrawBedsideTable(click, new Point(e.X, e.Y));
+                        BedsideTable bedsideTable = new BedsideTable(click, new Point(e.X, e.Y));
+                        last_object = draw.DrawPicture(bedsideTable); 
                         break;
                     case "Computer":
-                        last_object = draw.DrawComputer(click, new Point(e.X, e.Y));
+                        Computer computer = new Computer(click, new Point(e.X, e.Y));
+                        last_object = draw.DrawPicture(computer);
                         break;
                     case "Wardrobe":
-                        last_object = draw.DrawWardrobe(click, new Point(e.X, e.Y));
+                        Wardrobe wardrobe = new Wardrobe(click, new Point(e.X, e.Y));
+                        last_object = draw.DrawPicture(wardrobe); 
                         break;
                     case "Window":
-                        last_object = draw.DrawWindow(click, new Point(e.X, e.Y));
+                        Window window = new Window(click, new Point(e.X, e.Y));
+                        last_object = draw.DrawPicture(window); 
                         break;
                     case "Door":
-                        last_object = draw.DrawDoor(click, new Point(e.X, e.Y));
+                        Door door = new Door(click, new Point(e.X, e.Y));
+                        last_object = draw.DrawPicture(door); 
                         break;
                     case "Arrow":
-                        last_object = draw.DrawArrow(click, new Point(e.X, e.Y));
+                        Arrow arrow = new Arrow(click, new Point(e.X, e.Y));
+                        last_object = draw.DrawPicture(arrow);
                         break;
                     case "Lamp":
-                        last_object = draw.DrawLamp(click, new Point(e.X, e.Y));
+                        Lamp lamp = new Lamp(click, new Point(e.X, e.Y));
+                        last_object = draw.DrawPicture(lamp);
                         break;
                     case "Armchair":
-                        last_object = draw.DrawArmchair(click, new Point(e.X, e.Y));
+                        Armchair armchair = new Armchair(click, new Point(e.X, e.Y));
+                        last_object = draw.DrawPicture(armchair);
                         break;
                     case "Drag_and_Drop":
                         if (data.moving_element != null)
@@ -202,11 +211,13 @@ namespace Bedroom
 
         private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenFileDialog opendialog = new OpenFileDialog();
-            opendialog.Title = "Открыть файл как...";
-            opendialog.CheckPathExists = true;
-            opendialog.Filter = "Image Files(*.jpg)|*.jpg|Image Files(*.png)|*.png|XML Files(*.xml)|*.xml";
-            opendialog.ShowHelp = true;
+            OpenFileDialog opendialog = new OpenFileDialog
+            {
+                Title = "Открыть файл как...",
+                CheckPathExists = true,
+                Filter = "Image Files(*.jpg)|*.jpg|Image Files(*.png)|*.png|XML Files(*.xml)|*.xml",
+                ShowHelp = true
+            };
             if (opendialog.ShowDialog() == DialogResult.OK)
             {
                 try
@@ -227,7 +238,7 @@ namespace Bedroom
                 }
                 catch
                 {
-                    MessageBox.Show("Невозможно сохранить файл", "Ошибка",
+                    MessageBox.Show("Невозможно открыть файл", "Ошибка",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
