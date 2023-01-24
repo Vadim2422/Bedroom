@@ -1,5 +1,4 @@
-﻿
-using Bedroom.classes.BedroomObjects;
+﻿using Bedroom.classes.BedroomObjects;
 using System.Drawing;
 using System.Windows.Forms;
 
